@@ -1,0 +1,21 @@
+# Environment variables (contains secrets - never push this)
+.env
+api/.env
+
+# Go build output
+api/main
+*.exe
+
+# Go module cache
+vendor/
+
+# Docker
+.dockerignore
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

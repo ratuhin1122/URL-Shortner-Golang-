@@ -10,7 +10,12 @@ RUN go build -o main .
 
 FROM alpine:latest
 
-RUN adduser -S -D -H /app appuser
+RUN adduser -S -D -H -h /app appuser
+
+#  -S → system user (no login shell)
+# -D → no password
+# -H → no home directory created
+# -h /app says → "home directory is /app"
 
 USER appuser
 

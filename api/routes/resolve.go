@@ -23,10 +23,11 @@ func ResolveURL(c *fiber.Ctx) error {
 		})
 	}
 
+	// increment visit counter in DB 1
 	rInr := database.CreateClient(1)
 	defer rInr.Close()
 
-	_ = rInr.Incr(database.Ctx, "counter").Result()
+	rInr.Incr(database.Ctx, "counter")
 
 	return c.Redirect(value, 301)
 }
