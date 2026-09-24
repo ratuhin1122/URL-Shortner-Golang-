@@ -5,7 +5,6 @@ import (
 	"os"
 
 	"github.com/go-redis/redis/v8"
-	
 )
 
 var ctx = context.Background()
